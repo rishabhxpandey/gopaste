@@ -1,0 +1,14 @@
+# compiled binary
+/paste
+
+# sqlite artifacts if someone points the default db path inside the repo
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# macOS cruft
+.DS_Store
+
+# editor / agent local state
+.claude/
