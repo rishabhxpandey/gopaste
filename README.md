@@ -1,6 +1,8 @@
-# paste
+# gopaste
 
-A personal clone of Meta's internal `paste` tool — but local-only, running on your laptop. Open the browser, type `paste/`, drop text in a textarea, get back a `PXXXXXXXX` link that renders your content with syntax highlighting. Pastes auto-expire after 30 days.
+A self-hosted pastebin that runs entirely on your laptop. Open the browser, type `paste/`, drop text in a textarea, get back a short URL like `P74829301` that renders your content with syntax highlighting. Pastes auto-expire after 30 days.
+
+Same idea as [Pastebin](https://pastebin.com), [GitHub Gist](https://gist.github.com), [hastebin](https://hastebin.com), or [dpaste](https://dpaste.com) — minus the network. Useful when you want a quick shareable-looking link for code/logs that never leaves your machine.
 
 - Single Go binary (CGO-free, ~20MB)
 - SQLite storage (pure-Go driver)
@@ -83,8 +85,8 @@ curl -X DELETE http://paste/P12345678
 ## Install (macOS)
 
 ```bash
-git clone https://github.com/rishabhxpandey/meta-paste-tool-clone.git
-cd meta-paste-tool-clone
+git clone https://github.com/rishabhxpandey/gopaste.git
+cd gopaste
 
 sudo make install   # compiles, copies to /usr/local/bin, installs LaunchDaemon
 sudo make hosts     # adds "127.0.0.1 paste" to /etc/hosts
